@@ -1,7 +1,7 @@
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3000",
-  "https://gigflow-ruby.vercel.app/",
+  "https://gigflow-ruby.vercel.app",
 ];
 
 const corsOptions = {
