@@ -15,8 +15,13 @@ import errorMiddleware from "./middlewares/error.middleware.js";
 
 const app = express();
 
-// SECURITY FIRST
-app.use(helmet());
+app.use(
+  helmet({
+    crossOriginResourcePolicy: false,
+    crossOriginOpenerPolicy: false,
+  })
+);
+
 
 app.use(cors(corsOptions));  
 app.use(express.json());

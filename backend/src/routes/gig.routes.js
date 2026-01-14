@@ -11,10 +11,10 @@ import { protect } from "../middlewares/auth.middleware.js";
 
 const router = express.Router();
 
-router.get("/", getGigs);               // public
+router.get("/", getGigs);               
 router.get("/my-gigs", protect, getMyGigs);
-router.get("/:id", getGigById);         // public
-router.post("/", protect, createGig);   // private
+router.get("/:id", getGigById);        
+router.post("/", protect, createGig);   
 router.patch("/:id", protect, updateGig);
 router.delete("/:id", protect, deleteGig);
 
